@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--Very-dark-blue-main-BG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card{
+    width: 350px;
+    height: 100%;
+}
+
+.card-container{
+    height: 100%;
+    background-color: var(--Very-dark-blue-card-BG);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.image{
+    height: 60%;
+    border-radius: .5rem;
+}
+
+.context{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    color: var(--White);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.title :hover{
+    color: var(--Cyan);
+}
+.text{
+    margin: 0;
+    color: var(--Soft-blue);
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Very-dark-blue-line); /* div acarak line yapmak yerine border verdik */
+}
+
+.ethereum{
+    color: var(--Cyan);
+    opacity: .8;
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items:center;
+    gap: .5rem;
+    font-weight: 600;
+}
+
+.ethereum p{
+    font-size: 16px;
+}
+
+
+.clock{
+    color: var(--Soft-blue);
+    opacity: .7;
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items:center;
+    gap: .5rem;
+}
+
+/* .line{
+    border: 0.1rem solid var(--Soft-blue);
+    opacity: 0.2;
+    margin: .3rem 0; /* 0 vermezsem kayiyor, ortalattik 
+    width: 100%;
+     
+} 
+*/
+
+.avatar{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items:center;
+    gap: 1rem;
+}
+
+.avatar img{
+    width: 30px;
+    border: 1px solid white ;
+    border-radius: 50%;
+}
+ .avatar p{
+    color: var(--Soft-blue);
+    font-weight: 300
+ }
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: white; 
+    position: absolute;
+    bottom: 1rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
