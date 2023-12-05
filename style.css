@@ -19,45 +19,80 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .card{
     width: 350px;
     height: 100%;
+    background-color: var(--Very-dark-blue-card-BG);
+    box-shadow: 0px 12px 30px 16px rgba(0, 0, 0, .3);
+    border-radius: 1rem;
 }
 
 .card-container{
     height: 100%;
-    background-color: var(--Very-dark-blue-card-BG);
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    border-radius: 1rem;
+}
+
+.header{
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 0;
 }
 
 .image{
-    height: 60%;
+    width: 100%;
     border-radius: .5rem;
+    display: block;
+}
+
+.overlay{
+    background-color: var(--Cyan);
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.header:hover .overlay,
+.header:hover .view{
+    display: block;
 }
 
 .context{
     height: 40%;
     display: flex;
     flex-direction: column;
+    /* gap: .5rem; */
 }
 
 .title{
     color: var(--White);
     font-weight: 600;
-    cursor: pointer;
 }
 
-.title :hover{
+.title:hover{
+    cursor: pointer;
     color: var(--Cyan);
 }
+
 .text{
     margin: 0;
+    padding: 0;
     color: var(--Soft-blue);
     font-weight: 400;
     opacity: 0.7;
@@ -67,6 +102,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: .5rem;
     border-bottom: 1px solid var(--Very-dark-blue-line); /* div acarak line yapmak yerine border verdik */
 }
 
@@ -94,6 +130,7 @@ body{
     justify-content: right;
     align-items:center;
     gap: .5rem;
+    font-size: 16px;
 }
 
 /* .line{
@@ -111,6 +148,9 @@ body{
     justify-content: left;
     align-items:center;
     gap: 1rem;
+    font-size: 16px;
+    padding-top: 0.5rem;
+    
 }
 
 .avatar img{
@@ -120,9 +160,14 @@ body{
 }
  .avatar p{
     color: var(--Soft-blue);
-    font-weight: 300
+    font-weight: 300;
+
  }
 
+ .name:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+ }
 
 
 
